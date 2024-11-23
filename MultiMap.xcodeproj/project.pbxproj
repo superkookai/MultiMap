@@ -6,14 +6,29 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BFE420852CF1624700ACD58D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE4207F2CF1624700ACD58D /* ContentView.swift */; };
+		BFE420862CF1624700ACD58D /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE420802CF1624700ACD58D /* Location.swift */; };
+		BFE4209A2CF163CD00ACD58D /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE420802CF1624700ACD58D /* Location.swift */; };
+		BFE4209D2CF1641600ACD58D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE4207F2CF1624700ACD58D /* ContentView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		BF4102B72CF05BDE0069A84E /* MultiMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFE4207F2CF1624700ACD58D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BFE420802CF1624700ACD58D /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		BFE4208C2CF1637700ACD58D /* MultiMapiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiMapiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		BF4102B92CF05BDE0069A84E /* MultiMap */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = MultiMap;
+			sourceTree = "<group>";
+		};
+		BFE4208D2CF1637700ACD58D /* MultiMapiOS */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MultiMapiOS;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,13 +41,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BFE420892CF1637700ACD58D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		BF4102AE2CF05BDE0069A84E = {
 			isa = PBXGroup;
 			children = (
+				BFE4209C2CF163FC00ACD58D /* Share */,
 				BF4102B92CF05BDE0069A84E /* MultiMap */,
+				BFE4208D2CF1637700ACD58D /* MultiMapiOS */,
 				BF4102B82CF05BDE0069A84E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +65,18 @@
 			isa = PBXGroup;
 			children = (
 				BF4102B72CF05BDE0069A84E /* MultiMap.app */,
+				BFE4208C2CF1637700ACD58D /* MultiMapiOS.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		BFE4209C2CF163FC00ACD58D /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				BFE420802CF1624700ACD58D /* Location.swift */,
+				BFE4207F2CF1624700ACD58D /* ContentView.swift */,
+			);
+			path = Share;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -70,6 +104,28 @@
 			productReference = BF4102B72CF05BDE0069A84E /* MultiMap.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BFE4208B2CF1637700ACD58D /* MultiMapiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFE420992CF1637800ACD58D /* Build configuration list for PBXNativeTarget "MultiMapiOS" */;
+			buildPhases = (
+				BFE420882CF1637700ACD58D /* Sources */,
+				BFE420892CF1637700ACD58D /* Frameworks */,
+				BFE4208A2CF1637700ACD58D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				BFE4208D2CF1637700ACD58D /* MultiMapiOS */,
+			);
+			name = MultiMapiOS;
+			packageProductDependencies = (
+			);
+			productName = MultiMapiOS;
+			productReference = BFE4208C2CF1637700ACD58D /* MultiMapiOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -81,6 +137,9 @@
 				LastUpgradeCheck = 1610;
 				TargetAttributes = {
 					BF4102B62CF05BDE0069A84E = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					BFE4208B2CF1637700ACD58D = {
 						CreatedOnToolsVersion = 16.1;
 					};
 				};
@@ -100,12 +159,20 @@
 			projectRoot = "";
 			targets = (
 				BF4102B62CF05BDE0069A84E /* MultiMap */,
+				BFE4208B2CF1637700ACD58D /* MultiMapiOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BF4102B52CF05BDE0069A84E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFE4208A2CF1637700ACD58D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -119,6 +186,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFE420852CF1624700ACD58D /* ContentView.swift in Sources */,
+				BFE420862CF1624700ACD58D /* Location.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFE420882CF1637700ACD58D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFE4209A2CF163CD00ACD58D /* Location.swift in Sources */,
+				BFE4209D2CF1641600ACD58D /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +375,69 @@
 			};
 			name = Release;
 		};
+		BFE420972CF1637800ACD58D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MultiMapiOS/Preview Content\"";
+				DEVELOPMENT_TEAM = T9MD4URZFH;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.superkookai.MultiMapiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BFE420982CF1637800ACD58D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MultiMapiOS/Preview Content\"";
+				DEVELOPMENT_TEAM = T9MD4URZFH;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.superkookai.MultiMapiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -314,6 +455,15 @@
 			buildConfigurations = (
 				BF4102C72CF05BDF0069A84E /* Debug */,
 				BF4102C82CF05BDF0069A84E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFE420992CF1637800ACD58D /* Build configuration list for PBXNativeTarget "MultiMapiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFE420972CF1637800ACD58D /* Debug */,
+				BFE420982CF1637800ACD58D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
