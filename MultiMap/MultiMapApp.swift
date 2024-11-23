@@ -12,7 +12,8 @@ struct MultiMapApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .navigationTitle("Search the places")
         }
-        .windowStyle(.hiddenTitleBar)
+//        .windowStyle(.hiddenTitleBar)
     }
 }

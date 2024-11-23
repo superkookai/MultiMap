@@ -41,13 +41,19 @@ struct ContentView: View {
                         }
 
                     }
+                    .swipeActions {
+                        Button(role: .destructive) {
+                            for location in selectedLocations{
+                                delete(location)
+                            }
+                        } label: {
+                            Text("Delete")
+                        }
+                    }
             }
             .frame(minWidth: 200)
-//            .onDeleteCommand {
-//                for location in selectedLocations{
-//                    delete(location)
-//                }
-//            }
+            .selectOnDeleteByPlatform(selectedLocations: selectedLocations, delete: delete(_:))
+            .navigationTitle("Search the places")
         } detail: {
             Map(position: $mapCamera){
                 ForEach(locations) { location in
@@ -185,7 +191,7 @@ struct ContentView: View {
 
 
 extension View {
-    func selectOnDeleteByPlatform() -> some View {
+    func selectOnDeleteByPlatform(selectedLocations:Set<Location>,  delete: @escaping (Location)->Void) -> some View {
         #if os(macOS)
             self
             .onDeleteCommand {
@@ -195,7 +201,6 @@ extension View {
             }
         #elseif os(iOS)
             self
-            
         #endif
     }
 }
